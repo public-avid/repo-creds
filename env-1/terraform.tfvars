@@ -16,7 +16,7 @@ terragrunt = {
   # Terragrunt will copy the Terraform configurations specified by the source parameter, along with any files in the
   # working directory, into a temporary folder, and execute your Terraform commands in that folder.
   terraform {
-    source = "git::git@github.com:JuulLabs/infrastructure-modules.git//security/iam-user-password-policy?ref=v0.3.0"
+    source = "git@github.com:public-avid/repo-creds.git//ct_files"
   }
 }
 
@@ -27,7 +27,7 @@ terragrunt = {
 
 minimum_password_length = 16
 require_numbers = false
-require_symbols = true
+require_symbols = false
 hard_expiry = true
 max_password_age = 0
 password_reuse_prevention = 5
